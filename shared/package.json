@@ -1,0 +1,80 @@
+{
+  "name": "@automation-platform/shared",
+  "version": "1.0.0",
+  "description": "Shared types and utilities for automation platform",
+  "main": "index.js",
+  "types": "types/index.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "type-check": "tsc --noEmit",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.5",
+    "@types/node": "^20.6.3",
+    "@typescript-eslint/eslint-plugin": "^6.7.2",
+    "@typescript-eslint/parser": "^6.7.2",
+    "eslint": "^8.49.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.2.2"
+  },
+  "peerDependencies": {
+    "typescript": ">=4.8.0"
+  },
+  "files": [
+    "dist",
+    "types",
+    "utils",
+    "config"
+  ],
+  "exports": {
+    ".": {
+      "types": "./types/index.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    },
+    "./types": {
+      "types": "./types/index.ts",
+      "import": "./dist/types/index.js",
+      "require": "./dist/types/index.js"
+    },
+    "./utils": {
+      "types": "./utils/index.ts",
+      "import": "./dist/utils/index.js",
+      "require": "./dist/utils/index.js"
+    },
+    "./config": {
+      "types": "./config/index.ts",
+      "import": "./dist/config/index.js",
+      "require": "./dist/config/index.js"
+    }
+  },
+  "keywords": [
+    "typescript",
+    "automation",
+    "mcp",
+    "langflow",
+    "llm",
+    "workflow"
+  ],
+  "author": "IT Easy Operations <iteasy.ops.dev@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iteasy-ops-dev/automation-platform.git",
+    "directory": "shared"
+  },
+  "bugs": {
+    "url": "https://github.com/iteasy-ops-dev/automation-platform/issues"
+  },
+  "homepage": "https://github.com/iteasy-ops-dev/automation-platform#readme"
+}
